@@ -1,0 +1,28 @@
+
+    <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+      <!-- TO UPDATE -->
+      <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="itemService.selectedItem.$key">
+
+      
+        <input type="text" class="form-control" name="name" #name="ngModel"
+          [(ngModel)]="itemService.selectedItem.name" placeholder="Add A Product">
+     
+        <input type="text" class="form-control" name="category" #category="ngModel"
+          [(ngModel)]="itemService.selectedItem.category" placeholder="Add A Category">
+      
+        <input type="text" class="form-control" name="location" #location="ngModel"
+          [(ngModel)]="itemService.selectedItem.location" placeholder="Add A Location">
+     
+         
+          <input type="number" class="form-control" name="price" #price="ngModel"
+            [(ngModel)]="itemService.selectedItem.price" placeholder="Add A Price">
+        
+
+      
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-plus-circle"></i> Add A Product
+        </button>
+        <button class="btn btn-secondary" type="reset" (click)="resetForm(itemForm)">
+          <i class="fas fa-sync-alt"></i> Reset
+        </button>
+     </form>
