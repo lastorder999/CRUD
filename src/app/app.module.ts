@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -21,7 +21,8 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     AppRoutingModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FormsModule
+    FormsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

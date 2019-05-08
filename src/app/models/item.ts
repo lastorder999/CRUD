@@ -4,4 +4,6 @@ export class Item {
     category: string;
     location: string;
     price: number;
+    imageURL: '';
+    imageName: '';
 }

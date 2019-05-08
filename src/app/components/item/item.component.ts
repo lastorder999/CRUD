@@ -32,4 +32,8 @@ export class ItemComponent implements OnInit {
     }
   }
 
+  // startUploaded(event: FileList) {
+  //   this.itemService.startUpload(event);
+  // }
+
 }
