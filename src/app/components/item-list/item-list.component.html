@@ -1,7 +1,8 @@
 <h1 class="text-center">
   List of item
 </h1>
-<table>
+<div>
+<table class="table">
   <thead>
     <tr>
       <th>No#</th>
@@ -9,7 +10,7 @@
       <th>Category</th>
       <th>Location</th>
       <th>Price</th>
-      
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -19,15 +20,14 @@
       <td>{{item.category}}</td>
       <td>{{item.location}}</td>
       <td>{{item.price}}</td>
-      
       <td>
         <button (click)="onEdit(item)">
           edit</button>
-
         <button (click)="onDelete(item.$key)">
           delete</button>
-
       </td>
     </tr>
   </tbody>
 </table>
+</div>
+
